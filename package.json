@@ -1,0 +1,14 @@
+{
+  "name": "ts-builder",
+  "version": "0.0.1",
+  "description": "Builder pattern for typescript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "prettier": "3.5.0",
+    "typescript": "5.5.3"
+  },
+  "private": true
+}
