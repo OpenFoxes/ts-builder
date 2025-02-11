@@ -1,0 +1,23 @@
+name: Run Sonar
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.head_ref ||  github.ref }}
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.BOT_TOKEN }}
+
+      - name: Upload scan to Sonar
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
