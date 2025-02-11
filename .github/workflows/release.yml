@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version (SemVer)'
+        description: "Version (SemVer)"
         required: true
         default: 0.0.0
 
@@ -36,7 +36,7 @@ jobs:
           git push -u origin HEAD:main --tags
 
   create-npm-release:
-    name: 'Create NPM release'
+    name: "Create NPM release"
     runs-on: ubuntu-latest
     needs: [set-version]
     steps:
@@ -51,7 +51,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   create-github-release:
-    name: 'Create GitHub release'
+    name: "Create GitHub release"
     runs-on: ubuntu-latest
     needs: [create-npm-release]
     steps:
