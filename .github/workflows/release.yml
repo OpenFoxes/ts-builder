@@ -48,10 +48,15 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.BOT_TOKEN }}
 
+      - name: Prepare NPM credentials
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+          echo email=${{ secrets.NPM_EMAIL }} >> .npmrc
+          echo always-auth=true >> .npmrc
+          npm version ${{ github.event.inputs.version }} --git-tag-version=false
+
       - name: Publish to NPM
-        run: npm publish --access=public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access=public --verbose
 
   create-github-release:
     name: "Create GitHub release"

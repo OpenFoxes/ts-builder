@@ -1,6 +1,9 @@
 {
   "name": "@openfoxes/ts-builder",
   "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Builder pattern for typescript",
   "homepage": "https://github.com/OpenFoxes/ts-builder",
   "bugs": {
