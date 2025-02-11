@@ -19,6 +19,9 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.BOT_TOKEN }}
 
+      - name: Install required dependencies
+        run: npm install
+
       - name: Update package version
         run: npm version ${{ github.event.inputs.version }} --git-tag-version=false
 
