@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
+    "test-cov": "jest --coverage",
     "format-all": "prettier -w ."
   },
   "devDependencies": {
