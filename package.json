@@ -20,7 +20,8 @@
     "build": "tsc",
     "test": "jest",
     "test-cov": "jest --coverage",
-    "format-all": "prettier -w ."
+    "format-all": "prettier -w .",
+    "generate-readme": "run-func internal/generate-readme.ts generateReadme"
   },
   "devDependencies": {
     "@types/jest": "29.5.14",
