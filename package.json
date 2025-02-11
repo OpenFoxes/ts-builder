@@ -1,5 +1,5 @@
 {
-  "name": "ts-builder",
+  "name": "@openfoxes/ts-builder",
   "version": "0.0.1",
   "description": "Builder pattern for typescript",
   "homepage": "https://github.com/OpenFoxes/ts-builder",
