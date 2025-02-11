@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-   Version 0.0.1
+   Version 0.1.0
 </p>
 
 <p align="center">
@@ -45,6 +45,7 @@ const frog = frogBuilder
   .set("color", "green")
   .set("calm", true)
   .build();
+
 ```
 
 ### Pre-requisites
@@ -58,7 +59,7 @@ npm install @openfoxes/ts-builder
 or
 
 ```bash
-npm install -E @openfoxes/ts-builder@0.0.1
+npm install -E @openfoxes/ts-builder@0.1.0
 ```
 
 ## Development
