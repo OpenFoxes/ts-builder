@@ -45,7 +45,6 @@ const frog = frogBuilder
   .set("color", "green")
   .set("calm", true)
   .build();
-
 ```
 
 ### Pre-requisites
