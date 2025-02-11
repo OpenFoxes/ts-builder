@@ -2,6 +2,19 @@
   "name": "ts-builder",
   "version": "0.0.1",
   "description": "Builder pattern for typescript",
+  "homepage": "https://github.com/OpenFoxes/ts-builder",
+  "bugs": {
+    "url": "https://github.com/OpenFoxes/ts-builder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenFoxes/ts-builder.git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "license": "LGPL-3.0-only",
+  "author": "Open Foxes",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -15,6 +28,5 @@
     "prettier": "3.5.0",
     "ts-jest": "29.2.5",
     "typescript": "5.5.3"
-  },
-  "private": true
+  }
 }
