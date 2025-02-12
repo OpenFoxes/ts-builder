@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-   Version 0.1.1
+   Version 0.2.0
 </p>
 
 <p align="center">
@@ -93,7 +93,7 @@ npm install @openfoxes/ts-builder
 or
 
 ```bash
-npm install -E @openfoxes/ts-builder@0.1.1
+npm install -E @openfoxes/ts-builder@0.2.0
 ```
 
 ## Development
