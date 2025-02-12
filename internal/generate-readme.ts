@@ -105,8 +105,7 @@ const generateUsage = () => {
 To generate a builder for the interface "Frog" just create a TSBuilder:
 
 \`\`\`typescript
-${fs.readFileSync("internal/example-frog.ts").toString()}
-\`\`\``;
+${fs.readFileSync("internal/example-frog.ts").toString()}\`\`\``;
 };
 
 const generatePreRequieries = (version: string) => {
