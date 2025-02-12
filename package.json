@@ -20,7 +20,7 @@
   "author": "Open Foxes",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -d",
     "test": "jest",
     "test-cov": "jest --coverage",
     "format-all": "prettier -w .",
