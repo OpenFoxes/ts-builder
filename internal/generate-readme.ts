@@ -7,7 +7,9 @@ export const generateReadme = (version: string) => {
     return;
   }
 
-  const readme = `${generateHeader(version)}
+  const readme = `${generateEAWarning()}
+
+${generateHeader(version)}
 
 ${generateInfo()}
 
@@ -27,6 +29,26 @@ ${generateCodeQuality()}
       console.error("Fehler beim Generieren der Readme-Datei!", err);
     }
   }
+};
+
+const generateEAWarning = () => {
+  return `<h1 align="center">
+    Attention!
+</h1>
+
+<p align="center">
+   This package is in an early development stage!
+</p>
+
+<p align="center">
+   Currently there is no stable builder available.
+</p>
+
+<p align="center">
+    The current phase tests different approaches as well as the deployment itself.
+</p>
+
+<br />`;
 };
 
 const generateHeader = (version: string) => {
