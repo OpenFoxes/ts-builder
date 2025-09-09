@@ -19,6 +19,13 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.BOT_TOKEN }}
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Letzte Commit-Message laden
+        id: last_commit
+        run: |
+          last_commit_msg=$(git log -1 --pretty=%s)
+          echo "lastcommit=$last_commit_msg" >> $GITHUB_ENV
 
       - name: Load dependencies
         run: npm ci
@@ -27,7 +34,7 @@ jobs:
         run: npm run format-all
 
       - name: Add corresponding commit
-        if: "!contains(github.event.head_commit.message, '🎨 Code formatted')"
+        if: "!contains(env.lastcommit, '🎨 Code formatted')"
         run: |
           git config --global user.name 'OpenFoxes Maintenance Bot'
           git config --global user.email 'openfoxes@bono-fox.de'
